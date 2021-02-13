@@ -12,8 +12,8 @@ export const timeframeOptions = {
 
 // token list urls to fetch tokens from - use for warnings on tokens and pairs
 export const SUPPORTED_LIST_URLS__NO_ENS = [
-  'https://gateway.ipfs.io/ipns/tokens.uniswap.org',
-  'https://www.coingecko.com/tokens_list/uniswap/defi_100/v_0_0_0.json',
+  'https://gateway.ipfs.io/ipns/tokens.ubeswap.org',
+  'https://www.coingecko.com/tokens_list/ubeswap/defi_100/v_0_0_0.json',
 ]
 
 // hide from overview list

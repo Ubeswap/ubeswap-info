@@ -1,5 +1,5 @@
-import { TokenList } from '@uniswap/token-lists'
-import schema from '@uniswap/token-lists/src/tokenlist.schema.json'
+import { TokenList } from '@uniswap/token-lists' // TODO: Ubeswap token lists
+import schema from '@uniswap/token-lists/src/tokenlist.schema.json' // TODO: Ubeswap token lists
 import Ajv from 'ajv'
 
 /**

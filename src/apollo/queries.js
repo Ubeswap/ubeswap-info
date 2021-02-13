@@ -1,3 +1,4 @@
+// TODO: Update graphs schema names with ubeswap
 import gql from 'graphql-tag'
 import { FACTORY_ADDRESS, BUNDLE_ID } from '../constants'
 
