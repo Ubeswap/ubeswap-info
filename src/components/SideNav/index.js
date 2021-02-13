@@ -168,23 +168,20 @@ function SideNav({ history }) {
                 Ubeswap.org
               </Link>
             </HeaderText>
-            <HeaderText>
-              <Link href="https://v1.ubeswap.info" target="_blank">
-                V1 Analytics
-              </Link>
-            </HeaderText>
+            {/* TODO: Docs DNE
             <HeaderText>
               <Link href="https://ubeswap.org/docs/v2" target="_blank">
                 Docs
               </Link>
             </HeaderText>
+                */}
             <HeaderText>
-              <Link href="https://discord.com/invite/FCfyBSbCU5" target="_blank">
+              <Link href="https://discord.gg/mS6Ad8Vmb2" target="_blank">
                 Discord
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://twitter.com/UbeswapProtocol" target="_blank">
+              <Link href="https://twitter.com/ubeswap" target="_blank">
                 Twitter
               </Link>
             </HeaderText>
