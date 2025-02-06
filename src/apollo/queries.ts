@@ -552,7 +552,7 @@ export const GLOBAL_TXNS = gql`
 
 export const ALL_TOKENS = gql`
   query AllTokens($skip: Int!) {
-    tokens(first: 500, skip: $skip, subgraphError: allow) {
+    tokens(first: 250, skip: $skip, subgraphError: allow) {
       id
       name
       symbol
@@ -640,7 +640,7 @@ export const PAIR_SEARCH = gql`
 
 export const ALL_PAIRS = gql`
   query AllPairs($skip: Int!) {
-    pairs(first: 500, skip: $skip, orderBy: trackedReserveUSD, orderDirection: desc, subgraphError: allow) {
+    pairs(first: 250, skip: $skip, orderBy: trackedReserveUSD, orderDirection: desc, subgraphError: allow) {
       id
       token0 {
         id
@@ -710,7 +710,7 @@ export const PAIRS_BULK = gql`
   ${PairFields}
   query PairsBulk($allPairs: [ID!]!) {
     pairs(
-      first: 500
+      first: 250
       where: { id_in: $allPairs }
       orderBy: trackedReserveUSD
       orderDirection: desc
@@ -724,7 +724,7 @@ export const PAIRS_BULK = gql`
 export const PAIRS_HISTORICAL_BULK = gql`
   query PairsHistoricalBulk($pairs: [ID!]!, $block: Int!) {
     pairs(
-      first: 200
+      first: 100
       where: { id_in: $pairs }
       block: { number: $block }
       orderBy: trackedReserveUSD

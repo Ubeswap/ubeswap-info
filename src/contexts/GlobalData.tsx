@@ -586,8 +586,8 @@ const getCeloPrice = async () => {
   return [celoPrice, celoPriceOneDay, priceChangeCelo]
 }
 
-const PAIRS_TO_FETCH = 500
-const TOKENS_TO_FETCH = 500
+const PAIRS_TO_FETCH = 250
+const TOKENS_TO_FETCH = 250
 
 /**
  * Loop through every pair on ubeswap, used for search

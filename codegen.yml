@@ -1,6 +1,6 @@
 schema:
   - https://api.thegraph.com/index-node/graphql
-  - https://gateway-arbitrum.network.thegraph.com/api/3f1b45f0fd92b4f414a3158b0381f482/subgraphs/id/JWDRLCwj4H945xEkbB6eocBSZcYnibqcJPJ8h9davFi
+  - https://interface-gateway.ubeswap.org/v1/v2-subgraph-proxy
   - https://gateway-arbitrum.network.thegraph.com/api/3f1b45f0fd92b4f414a3158b0381f482/subgraphs/id/5Uhq8XrBsxdRwMKBNXcp4GuHp1SRmqPK5hgCCMqxDxhB
 documents: ./src/apollo/queries.ts
 config:
