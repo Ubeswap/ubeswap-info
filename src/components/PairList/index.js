@@ -161,6 +161,8 @@ function PairList({ pairs, color, disbaleLinks, maxItems = 10, useTracked = fals
       // dont filter known tokens out of pair list
       const pairData = pairs[address]
       if (
+        pairData.token0 &&
+        pairData.token1 &&
         ALL_TOKEN_ADDRESSES.has(isAddress(pairData.token0.id)) &&
         ALL_TOKEN_ADDRESSES.has(isAddress(pairData.token1.id))
       ) {
