@@ -556,7 +556,9 @@ export function useHourlyRateData(pairAddress: string, timeWindow) {
     const currentTime = dayjs.utc()
     const windowSize = timeWindow === timeframeOptions.MONTH ? 'month' : 'week'
     const startTime =
-      timeWindow === timeframeOptions.ALL_TIME ? 1589760000 : currentTime.subtract(1, windowSize).startOf('hour').unix()
+      timeWindow === timeframeOptions.ALL_TIME
+        ? currentTime.subtract(3, 'month').startOf('hour').unix()
+        : currentTime.subtract(1, windowSize).startOf('hour').unix()
 
     async function fetch() {
       const data = await getHourlyRateData(pairAddress, startTime, latestBlock)
