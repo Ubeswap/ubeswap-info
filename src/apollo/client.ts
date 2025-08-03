@@ -18,7 +18,7 @@ export const healthClient = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://gateway-arbitrum.network.thegraph.com/api/3f1b45f0fd92b4f414a3158b0381f482/subgraphs/id/5Uhq8XrBsxdRwMKBNXcp4GuHp1SRmqPK5hgCCMqxDxhB',
+    uri: 'https://gateway-arbitrum.network.thegraph.com/api/3f1b45f0fd92b4f414a3158b0381f482/subgraphs/id/68pKaceT6yxMc2EgBbptM1rVksY5NDKu2AsTQaP4z3ER',
   }),
   cache: new InMemoryCache(),
 })
