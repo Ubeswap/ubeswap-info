@@ -26,7 +26,7 @@ import {
   TOKENS_CURRENT,
   TOKENS_DYNAMIC,
 } from '../apollo/queries'
-import { timeframeOptions } from '../constants'
+import { ALL_MAINNET_TOKENS_MAP, timeframeOptions } from '../constants'
 import {
   get2DayPercentChange,
   getBlockFromTimestamp,
@@ -286,6 +286,15 @@ const getTopTokens = async () => {
       (current &&
         current?.data?.tokens?.map(async (token) => {
           const data = token
+          if (data) {
+            const addressChecksum = isAddress(data.id)
+            const tokenInfo = addressChecksum ? ALL_MAINNET_TOKENS_MAP[addressChecksum] : null
+            if (tokenInfo) {
+              data.logoURI = tokenInfo.logoURI
+              data.name = tokenInfo.name
+              data.symbol = tokenInfo.symbol
+            }
+          }
 
           // let liquidityDataThisToken = liquidityData?.[token.id]
           let oneDayHistory: TokenDataQuery['tokens'][number] | null = oneDayData?.[token.id]
@@ -425,6 +434,15 @@ const getTokenData = async (address: string): Promise<TokenData | null> => {
       variables: { tokenAddress: address, tokenAddressID: address },
     })
     data = result?.data?.tokens?.[0]
+    if (data) {
+      const addressChecksum = isAddress(address)
+      const tokenInfo = addressChecksum ? ALL_MAINNET_TOKENS_MAP[addressChecksum] : null
+      if (tokenInfo) {
+        data.logoURI = tokenInfo.logoURI
+        data.name = tokenInfo.name
+        data.symbol = tokenInfo.symbol
+      }
+    }
 
     // get results from 24 hours in past
     const oneDayResult = await client.query<TokenDataQuery, TokenDataQueryVariables>({
